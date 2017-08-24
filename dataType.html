@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>data type</title>
+	<style type="text/css">
+		.acoder{
+			height: 50px;
+			width: 700px;
+			border: solid 1px;
+		}
+		.codeMonkey{
+			border-color: blue
+		}
+		.codeGirl{
+			border-color: pink
+		}
+		div{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="acoder codeMonkey">Hi 我是程序猿,使用了嵌入样式</div>
+<div class="acoder codeGirl">Hi 我是程序媛,使用了外部样式</div>
+</body>
+<!-- <script type="text/javascript" src="./js/index.js"></script> -->
+<script type="text/javascript">
+	// console.log(codeMonkey)
+	//////////// 变量类型
+	var codeMonkey;
+	console.log(codeMonkey)
+	var codeMonkey = 'this is a codeMonkey';
+	console.log(codeMonkey)
+	var codeMonkey = 128;
+	console.log(codeMonkey)
+	var codeMonkey = true;
+	console.log(codeMonkey)
+	var codeMonkey = ['code','monkey'];
+	console.log(codeMonkey)
+	var codeMonkey = {
+		sex: 'male',
+		age: 27
+	}
+	console.log(codeMonkey)
+	var codeMonkey = null;
+	console.log(codeMonkey)
+	///////////// 变量提升，动态类型，弱类型
+	// codeMonkey = true;
+	// console.log(codeMonkey)
+	// codeMonkey = {
+	// 	sex: 'male',
+	// 	age: 27
+	// };
+	// console.log(codeMonkey);
+	// console.log(undefined == null)
+	// console.log(0 == '0')
+	/////////// 对象引用
+	// var codeMonkey = {
+	// 	sex: 'male',
+	// 	age: 27
+	// }
+	// var copyCodeMonkey = {};
+	// copyCodeMonkey = codeMonkey;
+	// // for(var key in codeMonkey){
+	// // 	copyCodeMonkey[key] = codeMonkey[key];
+	// // }
+	// copyCodeMonkey.sex = 'idontknow';
+	// console.log(copyCodeMonkey)
+	// console.log(codeMonkey)
+
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>data type</title>
+	<style type="text/css">
+		.acoder{
+			height: 100px;
+			width: 700px;
+			border: solid 1px;
+		}
+		.codeMonkey{
+			border-color: blue
+		}
+		.codeGirl{
+			border-color: pink
+		}
+		div{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="acoder codeMonkey" id="codeMonkey" onclick="letCode(event)">
+	<p>Hi 我是程序猿</p>
+	<input id="codeMonkeyDo" type="text" />
+</div>
+<div class="acoder codeGirl" id="codeGirl" onclick="letCode(event)">
+	<p>Hi 我是程序媛</p>
+	<input id="codeGirlDo" type="text" />
+</div>
+</body>
+<!-- <script type="text/javascript" src="./js/index.js"></script> -->
+<script type="text/javascript">
+	// console.log($)
+	// letCode()
+	function letCode(e){
+		var msg;
+		// if(!e) $();
+		if(e.target.id === 'codeMonkey'){
+			msg = 'coding ruby...'
+			document.getElementById('codeMonkeyDo').value = 'finish coding ruby!';
+			// $('codeMonkeyDo').value = 'finish coding ruby!';
+		}else if(e.target.id === 'codeGirl'){
+			msg = 'coding javascript...'
+			document.getElementById('codeGirlDo').value = 'finish coding javascript!';
+			// $('codeGirlDo').value = 'finish coding javascript!';
+		}
+		alert(msg)
+		return msg
+	}
+	function $(id){
+		return document.getElementById(id);
+	}
+	// var $ = function(id){
+	// 	return document.getElementById(id);
+	// }
+</script>
+</html>

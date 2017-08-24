@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>structure of js</title>
+	<style type="text/css">
+		.acoder{
+			height: 100px;
+			width: 700px;
+			border: solid 1px;
+		}
+		.codeMonkey{
+			border-color: blue
+		}
+		.codeGirl{
+			border-color: pink
+		}
+		div{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="acoder codeMonkey" id="codeMonkey" onclick="alert('hi i am codeMonkey');console.log(onclick)">
+	<p>Hi 我是程序猿</p>
+	<input id="codeMonkeyDo" type="text" />
+</div>
+<div class="acoder codeGirl" id="codeGirl">
+	<p>Hi 我是程序媛</p>
+	<input id="codeGirlDo" type="text" />
+</div>
+</body>
+<!-- <script type="text/javascript" src="./js/index.js"></script> -->
+<script type="text/javascript">
+	//JS Object
+	// Array .length .push()
+	var jsObject = new Array();
+	console.log(typeof jsObject);
+	console.log(jsObject);
+	// 
+	var jsObject = new Number();
+	console.log(typeof jsObject);
+	console.log(jsObject);
+	//
+	var jsObject = new String();
+	console.log(typeof jsObject);
+	console.log(jsObject);
+	//
+	var jsObject = new Function('args','console.log(args)');
+	console.log(jsObject);
+	jsObject('hi i am Function');
+
+	// // BOM
+	// function function_name(argument) {
+	// 	var bar = 'bar'
+	// }
+	// var foo = 'foo'
+	// console.log(window)
+	// console.log(window.history)
+	// // window.alert(this.foo)
+
+	// DOM
+	// console.log(window.document)
+	// // console.log(window.document.__proto__)
+	// console.log(typeof onclick)
+	// document.getElementById('codeGirl').addEventListener('click',function(){
+	// 	alert('hi i am codeGirl')
+	// })
+</script>
+</html>

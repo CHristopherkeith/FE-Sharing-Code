@@ -1,0 +1,1 @@
+console.log('来自文件的js');

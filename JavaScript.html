@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<style type="text/css">
+		.acoder{
+			height: 50px;
+			width: 700px;
+			border: solid 1px;
+		}
+		.codeMonkey{
+			border-color: blue
+		}
+		.codeGirl{
+			border-color: pink
+		}
+		div{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="acoder codeMonkey" onclick="console.log('来自事件触发的js')">Hi 我是程序猿,使用了嵌入样式</div>
+<div class="acoder codeGirl">Hi 我是程序媛,使用了外部样式</div>
+</body>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript">
+	console.log('来自内嵌的js');
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>data type</title>
+	<style type="text/css">
+		.acoder{
+			height: 100px;
+			width: 700px;
+			border: solid 1px;
+		}
+		.codeMonkey{
+			border-color: blue
+		}
+		.codeGirl{
+			border-color: pink
+		}
+		div{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="acoder codeMonkey" id="codeMonkey">
+	<p>Hi 我是程序猿</p>
+	<input id="codeMonkeyDo" type="text" />
+</div>
+<div class="acoder codeGirl" id="codeGirl">
+	<p>Hi 我是程序媛</p>
+	<input id="codeGirlDo" type="text" />
+</div>
+</body>
+<script type="text/javascript" src="./js/jquery-2.2.2.js"></script>
+<script type="text/javascript" src="./js/inheritedCoder.js"></script>
+<script type="text/javascript">
+
+	var codeMonkey = new Coder({coderId:'codeMonkey',language: 'ruby'})
+	var codeGirl = new Coder({coderId:'codeGirl',language: 'javascript'})
+	///********* inherited ↓
+	// console.log(codeMonkey)
+	// console.log(codeGirl)
+
+	///*************static method ↓
+	// codeMonkey.yourWish
+	// Coder.yourWish()
+
+	////************call apply↓
+
+	//// 改变context ↓
+	// var justPasserby = {language: 'c++script'};
+	// Coder.prototype.alertSth.call(justPasserby)
+	// codeMonkey.alertSth.call(justPasserby)
+	// Coder.prototype.alertSth.apply(justPasserby)
+	// console.log(justPasserby)
+
+	////继承构造函数 ↓
+	// var Passerby = function(passerbyConfig){
+	// 	this.speciality = passerbyConfig.speciality;
+	// 	Coder.call(this,passerbyConfig);
+	// }
+	// Passerby.prototype = Coder.prototype;
+	// var aPasserby = new Passerby({coderId:'aPasserby',language: 'c++script',speciality:'Universe Oriented'})
+	// console.log(aPasserby)
+	// aPasserby.alertSth();
+	/// 类进一步抽象 ↑
+
+	//*************call apply 带参数区别
+	// Coder.prototype.alertSth.call(justPasserby,'not happy','angry')
+	// Coder.prototype.alertSth.apply(justPasserby,['not happy','angry'])
+	$('#codeMonkey').on('click',function(){
+		codeMonkey.alertSth();
+		codeMonkey.finishTask();
+	})
+	$('#codeGirl').on('click',function(){
+		codeGirl.alertSth();
+		codeGirl.finishTask();
+	})
+
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>data type</title>
+	<style type="text/css">
+		.acoder{
+			height: 100px;
+			width: 700px;
+			border: solid 1px;
+		}
+		.codeMonkey{
+			border-color: blue
+		}
+		.codeGirl{
+			border-color: pink
+		}
+		div{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="acoder codeMonkey" id="codeMonkey">
+	<p>Hi 我是程序猿</p>
+	<input id="codeMonkeyDo" type="text" />
+</div>
+<div class="acoder codeGirl" id="codeGirl">
+	<p>Hi 我是程序媛</p>
+	<input id="codeGirlDo" type="text" />
+</div>
+</body>
+<script type="text/javascript" src="./js/jquery-2.2.2.js"></script>
+<script type="text/javascript">
+
+	$('#codeMonkey').on('click',function(){
+		alert('coding ruby...');
+		$(this).children('input').val('finish coding ruby!')
+	})
+	$('#codeGirl').on('click',function(){
+		alert('coding javascript...');
+		$(this).children('input').val('finish coding javascript!')
+	})
+
+</script>
+</html>

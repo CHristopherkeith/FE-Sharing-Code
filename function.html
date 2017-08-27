@@ -29,13 +29,11 @@
 	<input id="codeGirlDo" type="text" />
 </div>
 </body>
-<!-- <script type="text/javascript" src="./js/index.js"></script> -->
 <script type="text/javascript">
+	// 函数提升
 	// console.log($)
-	// letCode()
 	function letCode(e){
 		var msg;
-		// if(!e) $();
 		if(e.target.id === 'codeMonkey'){
 			msg = 'coding ruby...'
 			document.getElementById('codeMonkeyDo').value = 'finish coding ruby!';
@@ -48,9 +46,9 @@
 		alert(msg)
 		return msg
 	}
-	function $(id){
-		return document.getElementById(id);
-	}
+	// function $(id){
+	// 	return document.getElementById(id);
+	// }
 	// var $ = function(id){
 	// 	return document.getElementById(id);
 	// }

@@ -47,6 +47,10 @@
 
 	var codeMonkey = new Coder({coderId:'codeMonkey',language: 'ruby'})
 	var codeGirl = new Coder({coderId:'codeGirl',language: 'javascript'})
+
+	// console.log('构造函数/原型混合方式')
+	// console.log(codeMonkey)
+
 	$('#codeMonkey').on('click',function(){
 		codeMonkey.alertSth();
 		codeMonkey.finishTask();

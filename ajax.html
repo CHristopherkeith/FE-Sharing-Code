@@ -31,35 +31,34 @@
 </body>
 <script type="text/javascript" src="./js/jquery-2.2.2.js"></script>
 <script type="text/javascript">
-
-	//*********使用Jquery重构
 	var params = {};
-	var codingDth = ''
+	var codingSth = ''
 	$('#codeMonkey').on('click',function(){
 		alert('coding ruby...');
 		params.coderId = 'codeMonkey';
 		doSthByAjax(params);
-		// $('#codeMonkeyDo').val(codingDth);
+		// $('#codeMonkeyDo').val(codingSth);
 	})
 	$('#codeGirl').on('click',function(){
 		alert('coding javascript...');
 		params.coderId = 'codeGirl';
 		doSthByAjax(params);
-		// $('#codeGirlDo').val(codingDth);
+		// $('#codeGirlDo').val(codingSth);
 	})
 	function doSthByAjax(params){
+		/// ext为Ext.Ajax.request
 		$.ajax({
 		  url: 'http://localhost:3000/project/getDatas',
-		  type: 'POST',
+		  type: 'POST',// GET PUT DELETE
 		  data: params,
 		  dataType: 'json',
 		  success: function(echoData, textStatus, jqXHR){
 		  	if(echoData.success){
-		  		codingDth = echoData.result;
+		  		codingSth = echoData.result;
 		  		if(this.data.split('=')[1] === 'codeMonkey'){
-		  			$('#codeMonkeyDo').val(codingDth);
+		  			$('#codeMonkeyDo').val(codingSth);
 		  		}else{
-		  			$('#codeGirlDo').val(codingDth);
+		  			$('#codeGirlDo').val(codingSth);
 		  		}
 		  	}else{
 		  		alert(echoData.result)

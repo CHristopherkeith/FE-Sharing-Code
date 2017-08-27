@@ -41,12 +41,14 @@
 		this.finishTask = function(){
 			$('#'+this.coderId).children('input').val('finish coding '+this.language+'!')
 		}
-
 		// return 'coder';
 	}
 
 	var codeMonkey = new Coder('codeMonkey','ruby');
 	var codeGirl = new Coder('codeGirl','javascript');
+
+	// console.log('构造函数方式')
+	// console.log(codeMonkey)
 
 	$('#codeMonkey').on('click',function(){
 		codeMonkey.alertSth();

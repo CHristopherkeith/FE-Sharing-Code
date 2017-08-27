@@ -31,7 +31,7 @@
 </body>
 <script type="text/javascript" src="./js/jquery-2.2.2.js"></script>
 <script type="text/javascript">
-
+	// 方法，功能
 	var codeMonkey = new Object();
 	codeMonkey.coderId = 'codeMonkey';
 	codeMonkey.language = 'ruby';
@@ -51,16 +51,15 @@
 	codeGirl.finishTask = function(){
 		$('#'+this.coderId).children('input').val('finish coding '+this.language+'!')
 	}
+	
+	// console.log('普通方式')
+	// console.log(codeMonkey)
 
 	$('#codeMonkey').on('click',function(){
-		// alert('coding ruby...');
-		// $(this).children('input').val('finish coding ruby!')
 		codeMonkey.alertSth();
 		codeMonkey.finishTask();
 	})
 	$('#codeGirl').on('click',function(){
-		// alert('coding javascript...');
-		// $(this).children('input').val('finish coding javascript!')
 		codeGirl.alertSth();
 		codeGirl.finishTask();
 	})

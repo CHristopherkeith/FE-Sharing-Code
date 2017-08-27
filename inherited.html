@@ -35,12 +35,19 @@
 
 	var codeMonkey = new Coder({coderId:'codeMonkey',language: 'ruby'})
 	var codeGirl = new Coder({coderId:'codeGirl',language: 'javascript'})
-	///********* inherited ↓
-	// console.log(codeMonkey)
-	// console.log(codeGirl)
+	// 继承类比ruby实例方法
+	///********* 构造函数 this继承 ↓
+	console.log(codeMonkey)
+	console.log(codeGirl)
 
+	///******* 原型继承 ↓
+	// console.log(codeMonkey.alertSth === codeGirl.alertSth)
+	// console.log(codeMonkey.__proto__ === Coder.prototype)
+	// // console.log(Coder.prototype)
+
+	/// 类比ruby 类方法
 	///*************static method ↓
-	// codeMonkey.yourWish
+	// codeMonkey.yourWish()
 	// Coder.yourWish()
 
 	////************call apply↓
@@ -48,7 +55,7 @@
 	//// 改变context ↓
 	// var justPasserby = {language: 'c++script'};
 	// Coder.prototype.alertSth.call(justPasserby)
-	// codeMonkey.alertSth.call(justPasserby)
+	// // codeMonkey.alertSth.call(justPasserby)
 	// Coder.prototype.alertSth.apply(justPasserby)
 	// console.log(justPasserby)
 
@@ -61,11 +68,13 @@
 	// var aPasserby = new Passerby({coderId:'aPasserby',language: 'c++script',speciality:'Universe Oriented'})
 	// console.log(aPasserby)
 	// aPasserby.alertSth();
-	/// 类进一步抽象 ↑
+	/// 类进一步抽象成 ↑
 
 	//*************call apply 带参数区别
-	// Coder.prototype.alertSth.call(justPasserby,'not happy','angry')
+	// var justPasserby = {language: 'c++script'};
+	// Coder.prototype.alertSth.call(justPasserby,'happy','very happy')
 	// Coder.prototype.alertSth.apply(justPasserby,['not happy','angry'])
+
 	$('#codeMonkey').on('click',function(){
 		codeMonkey.alertSth();
 		codeMonkey.finishTask();

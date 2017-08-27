@@ -1,12 +1,3 @@
-// console.log(ff)
-{
-	let ff = '22'
-	console.log(ff)
-}
-const foo = 'foo'
-// console.log(foo)
-// foo = '1'
-// console.log(ff)
 var bar = ()=>{
 	return 'bar'
 }

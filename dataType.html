@@ -23,28 +23,45 @@
 <div class="acoder codeMonkey">Hi 我是程序猿,使用了嵌入样式</div>
 <div class="acoder codeGirl">Hi 我是程序媛,使用了外部样式</div>
 </body>
-<!-- <script type="text/javascript" src="./js/index.js"></script> -->
 <script type="text/javascript">
-	// console.log(codeMonkey)
-	//////////// 变量类型
-	var codeMonkey;
-	console.log(codeMonkey)
+	// //////////// 变量类型
+	console.log('字符串类型')
 	var codeMonkey = 'this is a codeMonkey';
 	console.log(codeMonkey)
+	///////
+	console.log('数字类型')
 	var codeMonkey = 128;
 	console.log(codeMonkey)
+	///////
+	console.log('布尔类型')
 	var codeMonkey = true;
 	console.log(codeMonkey)
+	////////
+	console.log('数组类型')
 	var codeMonkey = ['code','monkey'];
 	console.log(codeMonkey)
+	//////// 对象
+	console.log('对象类型')
 	var codeMonkey = {
 		sex: 'male',
 		age: 27
 	}
 	console.log(codeMonkey)
+	///////// null
+	console.log('null类型')
 	var codeMonkey = null;
 	console.log(codeMonkey)
-	///////////// 变量提升，动态类型，弱类型
+	//////// undefined
+	console.log('undefined类型')
+	var codeGirl;
+	console.log(codeGirl)
+
+	////////// 变量提升
+	// console.log(foo)
+	// var foo = 'foo'
+	// console.log(foo)
+
+	/////////// 动态类型
 	// codeMonkey = true;
 	// console.log(codeMonkey)
 	// codeMonkey = {
@@ -52,9 +69,10 @@
 	// 	age: 27
 	// };
 	// console.log(codeMonkey);
+	//////////// 弱类型
 	// console.log(undefined == null)
 	// console.log(0 == '0')
-	/////////// 对象引用
+	///////// 对象引用
 	// var codeMonkey = {
 	// 	sex: 'male',
 	// 	age: 27
@@ -67,6 +85,5 @@
 	// copyCodeMonkey.sex = 'idontknow';
 	// console.log(copyCodeMonkey)
 	// console.log(codeMonkey)
-
 </script>
 </html>
